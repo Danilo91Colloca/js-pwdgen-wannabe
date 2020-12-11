@@ -5,20 +5,21 @@ var cognome;
 var colorePrefe;
 var anno;
 var risultatoPsw;
+var età;
+var annoNascita;
+var risposta;
+
 //definisco il contenuto della variabile "nome"
 
 nome = prompt ('Come ti chiami?');
-console.log('l\'utente si chiama: ' + nome);
 
 //definisco il contenuto della variabile "cognome"
 
 cognome = prompt ('Ciao ' + nome + ' Qual\'è il tuo cognome?');
-console.log('il cognome dell\'utente è: ' + cognome);
 
 //definisco il contenuto della variabile "colorePrefe" (colore preferito)
 
 colorePrefe = prompt ('Molto bene ' + nome + ' ' + cognome + ' conosciamoci meglio... Qual\'è il tuo colore preferito?');
-console.log('il colore preferito di ' + nome + ' ' + cognome + ' è ' + colorePrefe);
 
 //definisco il contenuto della variabile "anno" (darà l'anno corrente)
 
@@ -30,4 +31,21 @@ console.log('verifica anno corrente: ' + anno);
 
 document.getElementById('result').innerHTML = 'la tua password: ' + nome + cognome + colorePrefe + anno;
 
-console.log('risultato password visualizzata: ' + nome + cognome + colorePrefe + anno);
+//dato il risultato avvio la possibilità di fare un gioco con l'utente
+
+risultatoPsw = prompt ('la tua password: ' + nome + cognome + colorePrefe + anno + ' ' + 'ora ti andrebbe di fare un gioco?')
+
+
+if(risultatoPsw === 'si') {
+  età = prompt ('Fantastico! dimmi quanti anni hai e indovinerò l\'anno della tua nascita');
+  annoNascita = prompt ('il tuo anno di nascita è: ' + (anno - età) + ' ho indovinato eeee??');
+  if (annoNascita === 'si') {
+    prompt ('lo sapevo grazie')
+
+  } else {
+    prompt ('non fare l\' imbroglione la matematica non è un opinione!')
+  }
+
+} else {
+  prompt ('...ok non sei per niente simpatico..')
+}
