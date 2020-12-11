@@ -29,6 +29,6 @@ console.log('verifica anno corrente: ' + anno);
 /* definisco il contenuto della variabile "risultatoPsw" e lo "stampo" sul foglio HTML
 */
 
-document.getElementById('result').innerHTML = 'la password tua password: ' + nome + cognome + colorePrefe + anno;
+document.getElementById('result').innerHTML = 'la tua password: ' + nome + cognome + colorePrefe + anno;
 
 console.log('risultato password visualizzata: ' + nome + cognome + colorePrefe + anno);
